@@ -1,3 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Team</title>
+</head>
+<body>
+    <h1>Here Is Your Team</h1>
+    <div>
+        <p>Team Name: <%= @team_name %></p>
+        <p>Team Motto: <%= @team_motto %></p>
+    </div>
 
+    <div>
+    <h2>Team Members:</h2>
+    <% @team_members.each.with_index do |hero, index| %>
+        <h2>Hero <%= index + 1 %></h2>
+        <p>Hero Name: <%= @hero_name[index] %></p>
+        <p>Hero Power: <%= @hero_power[index] %></p>
+        <p>Hero Biography: <%= @hero_bio[index] %></p><br>
+    <% end %>
+
+    </div>
+
+</body>
+</html>
 
 
