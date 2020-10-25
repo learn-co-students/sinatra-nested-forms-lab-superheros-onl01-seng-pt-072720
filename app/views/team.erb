@@ -1,3 +1,10 @@
+<h1><%= @team_full_hash[:name] %></h1>
+<h2>Team Motto: <%= @team_full_hash[:motto] %> </h2>
 
 
+<% @team_members_hash.each do |member|%>
+    <h2>Hero Name: <%= member[:name] %></h2>
+    <h3>Hero Power: <%= member[:power] %></h3>
+    <h3>Hero Biography: <%= member[:bio] %></h3>
+<% end %>
 
